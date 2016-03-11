@@ -17,36 +17,32 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Calculate(object sender, EventArgs e)
         {
             double firstNumber = Convert.ToDouble(textBox1.Text);
             double secondNumber = Convert.ToDouble(textBox2.Text);
-            double Result = firstNumber + secondNumber;
-            label1.Text = Result.ToString();
+            double result = firstNumber / secondNumber;
+            switch (((Button)sender).Name)
+            {
+                case "button1":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "button2":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "button3":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "button4":
+                    result = firstNumber / secondNumber;
+                    break;
+                default:
+                    throw new Exception("Unknown peration");
+            }
+            label1.Text = result.ToString();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            double firstNumber = Convert.ToDouble(textBox1.Text);
-            double secondNumber = Convert.ToDouble(textBox2.Text); 
-            double Result = firstNumber - secondNumber;
-            label1.Text = Result.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            double firstNumber = Convert.ToDouble(textBox1.Text);
-            double secondNumber = Convert.ToDouble(textBox2.Text);
-            double Result = firstNumber * secondNumber;
-            label1.Text = Result.ToString();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            double firstNumber = Convert.ToDouble(textBox1.Text);
-            double secondNumber = Convert.ToDouble(textBox2.Text);
-            double Result = firstNumber / secondNumber;
-            label1.Text = Result.ToString();
-        }
     }
+
 }
