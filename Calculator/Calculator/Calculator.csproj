@@ -53,10 +53,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ISingleCalculator.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="LnCalculator.cs" />
     <Compile Include="multiplicationcalculate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleFactory.cs" />
+    <Compile Include="SquareCalculator.cs" />
     <Compile Include="subtractioncalculate.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

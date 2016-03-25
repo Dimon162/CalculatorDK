@@ -21,11 +21,18 @@ namespace Calculator
         {
             double firstNumber = Convert.ToDouble(textBox1.Text);
             double secondNumber = Convert.ToDouble(textBox2.Text);
-            
+
             ICalculator calculator = Factory.Create(((Button) sender).Name);
             double result = calculator.Calculate(firstNumber, secondNumber);
             label1.Text = result.ToString();
+        }
 
+        private void SingleCalculate(object sender, EventArgs e)
+        {
+            double firstNumber = Convert.ToDouble(textBox1.Text);
+            ISingleCalculator calculator = SingleFactory.Create(((Button) sender).Name);
+            double result = calculator.Calculate(firstNumber);
+            label1.Text = result.ToString();
         }
 
     }
