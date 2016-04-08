@@ -107,7 +107,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 7;
-            this.button5.Text = "sqr";
+            this.button5.Text = "ln";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.SingleCalculate);
             // 
@@ -117,7 +117,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 8;
-            this.button6.Text = "Ln";
+            this.button6.Text = "sqr";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.SingleCalculate);
             // 
