@@ -5,7 +5,7 @@ namespace Calculator.Tests.TwoArgumentTest
     [TestFixture]
     public class DivisionCalculateTests
     {
-        [TestCase(10, 5, 2)]
+        [TestCase(10520.40, 2, 5260.20)]
         [TestCase(12, 4, 4)]
         public void SimpleTest(double first, double second, double expected)
         {
