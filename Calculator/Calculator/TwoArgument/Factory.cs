@@ -12,16 +12,16 @@ namespace Calculator.TwoArgument
                     return new AdditionCalculate();
 
                 case "button2":
-                   return new DivisionCalculate();
+                   return new SubtractionCalculate();
                     
                 case "button3":
                     return new MultiplicationCalculate();
                    
                 case "button4":
-                    return new SubtractionCalculate();
+                    return new DivisionCalculate();
                     
                 default:
-                    throw new Exception("Unknown peration");
+                    throw new Exception("Unknown operation");
             
             }
         }

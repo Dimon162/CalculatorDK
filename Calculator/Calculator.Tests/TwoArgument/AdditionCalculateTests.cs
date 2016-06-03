@@ -12,7 +12,7 @@ namespace Calculator.Tests.TwoArgument
         {
             ICalculator calculator = new AdditionCalculate();
             double result = calculator.Calculate(first, second);
-            Assert.AreEqual(expected,result);   
+            Assert.AreEqual(expected, result);
         }
     }
 }

@@ -14,20 +14,35 @@ namespace Calculator
 
         private void Calculate(object sender, EventArgs e)
         {
-            double firstNumber = Convert.ToDouble(textBox1.Text);
-            double secondNumber = Convert.ToDouble(textBox2.Text);
+            try
+            {
+                double firstNumber = Convert.ToDouble(textBox1.Text);
+                double secondNumber = Convert.ToDouble(textBox2.Text);
 
-            ICalculator calculator = Factory.Create(((Button) sender).Name);
-            double result = calculator.Calculate(firstNumber, secondNumber);
-            label1.Text = result.ToString();
+                ICalculator calculator = Factory.Create(((Button) sender).Name);
+                double result = calculator.Calculate(firstNumber, secondNumber);
+                label1.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка: " + ex.Message);
+
+            }
         }
 
         private void SingleCalculate(object sender, EventArgs e)
         {
-            double firstNumber = Convert.ToDouble(textBox1.Text);
-            ISingleCalculator calculator = SingleFactory.Create(((Button) sender).Name);
-            double result = calculator.Calculate(firstNumber);
-            label1.Text = result.ToString();
+            try
+            {
+                double firstNumber = Convert.ToDouble(textBox1.Text);
+                ISingleCalculator calculator = SingleFactory.Create(((Button) sender).Name);
+                double result = calculator.Calculate(firstNumber);
+                label1.Text = result.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка: " + ex.Message);
+            }
         }
 
     }

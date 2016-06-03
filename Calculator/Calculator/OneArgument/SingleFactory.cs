@@ -2,7 +2,11 @@
 
 namespace Calculator.OneArgument
 {
+    /// <summary>
+    /// Фабрика калькуляторов
+    /// </summary>
     public static class SingleFactory
+    
     {
         public static ISingleCalculator Create(string name)
         {

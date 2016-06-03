@@ -1,5 +1,8 @@
 ﻿namespace Calculator.TwoArgument
 {
+    /// <summary>
+    /// Класс, реализующий операцию сложения
+    /// </summary>
     public class AdditionCalculate: ICalculator
 
 {

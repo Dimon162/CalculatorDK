@@ -1,4 +1,6 @@
-﻿using Calculator.TwoArgument;
+﻿using System;
+using System.Windows.Forms;
+using Calculator.TwoArgument;
 using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArgument
@@ -13,6 +15,14 @@ namespace Calculator.Tests.TwoArgument
             ICalculator calculator = new DivisionCalculate();
             double result = calculator.Calculate(first,second);
             Assert.AreEqual(expected,result);
+        }
+
+        [Test]
+        public void SimpleTest()
+        {
+            ICalculator calculator = new DivisionCalculate();
+            
+            Assert.Throws<Exception>(() => calculator.Calculate(57, 0));
         }
 
     }
